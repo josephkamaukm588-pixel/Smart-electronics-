@@ -506,7 +506,18 @@ document.getElementById("checkoutForm").addEventListener("submit", function(even
     "Customer: " + name + "<br>" +
     "Phone: " + phone + "<br>" +
     "Delivery: " + location + "<br><br>" +
-    orderDetails;
+    orderDetails;const whatsappMessage =
+  "🛒 NEW ORDER - Smart Electronics\n\n" +
+  "Customer: " + name + "\n" +
+  "Phone: " + phone + "\n" +
+  "Delivery: " + location + "\n\n" +
+  orderDetails.replace(/<br>/g, "\n");
+
+window.open(
+  "https://wa.me/254716127023?text=" +
+  encodeURIComponent(whatsappMessage),
+  "_blank"
+);
 
   cart = [];
   saveCart();
