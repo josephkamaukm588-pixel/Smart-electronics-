@@ -419,7 +419,102 @@ document.getElementById("clearCart").addEventListener("click", function() {
 });
 
 displayCart();
-</script> <footer>
+</script> 
+  <section class="checkout-section" id="checkout">
+  <h2>🛍️ Checkout</h2>
+
+  <form id="checkoutForm">
+    <input type="text" id="customerName" placeholder="Your full name" required>
+
+    <input type="tel" id="customerPhone" placeholder="Phone number" required>
+
+    <input type="text" id="customerLocation" placeholder="Delivery location" required>
+
+    <button type="submit" class="checkout-button">
+      Place Order
+    </button>
+  </form>
+
+  <div id="orderMessage"></div>
+</section>
+
+<style>
+.checkout-section {
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+}
+
+.checkout-section form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.checkout-section input {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#orderMessage {
+  margin-top: 20px;
+  font-weight: bold;
+}
+</style>
+
+<script>
+document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  if (cart.length === 0) {
+    document.getElementById("orderMessage").innerHTML =
+      "Please add a product to your cart first.";
+    return;
+  }
+
+  const name = document.getElementById("customerName").value;
+  const phone = document.getElementById("customerPhone").value;
+  const location = document.getElementById("customerLocation").value;
+
+  let orderDetails = "";
+
+  cart.forEach(item => {
+    orderDetails +=
+      item.name + " × " + item.quantity +
+      " = KSh " +
+      (item.price * item.quantity).toLocaleString() +
+      "<br>";
+  });
+
+  document.getElementById("orderMessage").innerHTML =
+    "✅ Order received!<br><br>" +
+    "Customer: " + name + "<br>" +
+    "Phone: " + phone + "<br>" +
+    "Delivery: " + location + "<br><br>" +
+    orderDetails;
+
+  cart = [];
+  saveCart();
+  displayCart();
+
+  document.getElementById("checkoutForm").reset();
+});
+</script><footer>
     © 2026 Smart Electronics. All rights reserved.
   </footer>
 
