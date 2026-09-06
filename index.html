@@ -1380,4 +1380,197 @@ alt="${item.name}"
 
 <div class="cart-details">
 
-<h3>${item.name
+<h3>${item.name}</h3>
+
+<p>KSh ${item.price.toLocaleString()} × ${item.quantity}</p>
+
+<div class="quantity-controls">
+
+<button
+class="quantity-btn"
+onclick="decreaseQuantity(${index})"
+>
+−
+</button>
+
+<span class="quantity">
+${item.quantity}
+</span>
+
+<button
+class="quantity-btn"
+onclick="increaseQuantity(${index})"
+>
++
+</button>
+
+<button
+class="remove-btn"
+onclick="removeItem(${index})"
+>
+Remove
+</button>
+
+</div>
+
+</div>
+
+</div>
+`;
+
+});
+
+cartTotal.textContent =
+total.toLocaleString();
+
+cartStatus.textContent =
+itemCount === 0
+? "Your cart is empty."
+: itemCount + " item(s) in your cart.";
+
+navCartCount.textContent =
+itemCount;
+
+}
+
+let currentCategory = "all";
+
+function filterProducts(category,button){
+
+currentCategory = category;
+
+document.querySelectorAll(".category").forEach(btn => {
+btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+applyProductFilters();
+
+}
+
+function searchProducts(){
+
+applyProductFilters();
+
+}
+
+function applyProductFilters(){
+
+const searchInput =
+document.getElementById("searchInput");
+
+const search =
+searchInput.value.toLowerCase().trim();
+
+const products =
+document.querySelectorAll(".product");
+
+let visibleProducts = 0;
+
+products.forEach(product => {
+
+const category =
+product.dataset.category;
+
+const name =
+product.dataset.name.toLowerCase();
+
+const categoryMatch =
+currentCategory === "all" ||
+category === currentCategory;
+
+const searchMatch =
+name.includes(search);
+
+if(categoryMatch && searchMatch){
+
+product.style.display = "";
+
+visibleProducts++;
+
+}else{
+
+product.style.display = "none";
+
+}
+
+});
+
+document.getElementById("noProducts").style.display =
+visibleProducts === 0
+? "block"
+: "none";
+
+}
+
+document.getElementById("checkoutForm").addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+if(cart.length === 0){
+
+document.getElementById("orderMessage").innerHTML =
+"Please add a product to your cart first.";
+
+return;
+
+}
+
+const name =
+document.getElementById("customerName").value;
+
+const phone =
+document.getElementById("customerPhone").value;
+
+const location =
+document.getElementById("customerLocation").value;
+
+let orderDetails = "";
+
+cart.forEach(item => {
+
+orderDetails +=
+item.name +
+" × " +
+item.quantity +
+" = KSh " +
+(item.price * item.quantity).toLocaleString() +
+"\n";
+
+});
+
+const whatsappMessage =
+"🛒 NEW ORDER - Smart Electronics\n\n" +
+"Customer: " + name + "\n" +
+"Phone: " + phone + "\n" +
+"Delivery: " + location + "\n\n" +
+orderDetails;
+
+document.getElementById("orderMessage").innerHTML =
+"✅ Order received! Opening WhatsApp...";
+
+window.open(
+"https://wa.me/254716127023?text=" +
+encodeURIComponent(whatsappMessage),
+"_blank"
+);
+
+cart = [];
+
+saveCart();
+
+displayCart();
+
+document.getElementById("checkoutForm").reset();
+
+});
+
+displayCart();
+
+</script>
+
+</body>
+</html>
