@@ -1,990 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Smart Electronics | Kenya</title>
-
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #172033;
-  line-height: 1.6;
-}
-
-/* HEADER */
-header {
-  background: #071827;
-  color: white;
-  text-align: center;
-  padding: 22px 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-}
-
-header h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.logo-green {
-  color: #19c463;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 14px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  background: #19c463;
-}
-
-.cart-nav {
-  background: #19a957;
-}
-
-/* HERO */
-.hero {
-  min-height: 520px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 50px 20px;
-  color: white;
-  background:
-    linear-gradient(rgba(5,20,35,0.78), rgba(5,20,35,0.78)),
-    linear-gradient(135deg, #0c273d, #102f45);
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.hero h2 {
-  font-size: 46px;
-  margin-bottom: 18px;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #dce5ec;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 15px 28px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
-  transition: 0.3s;
-}
-
-.btn-primary {
-  background: #19b957;
-  color: white;
-}
-
-.btn-whatsapp {
-  background: #25d366;
-  color: white;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-/* BENEFITS */
-.benefits {
-  max-width: 1100px;
-  margin: 30px auto 70px;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.benefit {
-  text-align: center;
-  padding: 35px 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.benefit:last-child {
-  border-bottom: none;
-}
-
-.benefit-icon {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.benefit h3 {
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.benefit p {
-  color: #747d89;
-  font-size: 17px;
-}
-
-/* SECTION */
-section {
-  padding: 60px 20px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 38px;
-  margin-bottom: 10px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #6c7580;
-  margin-bottom: 40px;
-  font-size: 18px;
-}
-
-/* PRODUCTS */
-.products {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
-.product {
-  background: white;
-  border-radius: 18px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.product:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.14);
-}
-
-.product-icon {
-  font-size: 65px;
-  margin-bottom: 12px;
-}
-
-.product h3 {
-  font-size: 23px;
-  margin-bottom: 10px;
-}
-
-.product p {
-  color: #68727d;
-  min-height: 52px;
-}
-
-.price {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 18px 0;
-  color: #111d2d;
-}
-
-.buy-button {
-  border: none;
-  background: #16a957;
-  color: white;
-  padding: 13px 22px;
-  border-radius: 9px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 100%;
-  transition: 0.3s;
-}
-
-.buy-button:hover {
-  background: #108b47;
-  transform: scale(1.03);
-}
-
-/* BADGE */
-.badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: #ff9800;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* CART */
-.cart-section {
-  background: white;
-}
-
-.cart-container {
-  max-width: 900px;
-  margin: auto;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 18px;
-  margin-bottom: 12px;
-  background: #f7f9fb;
-  border-radius: 12px;
-}
-
-.cart-item-info {
-  flex: 1;
-}
-
-.cart-item h3 {
-  margin-bottom: 5px;
-}
-
-.cart-price {
-  font-weight: bold;
-}
-
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.quantity-controls button {
-  border: none;
-  background: #172033;
-  color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.remove-button {
-  border: none;
-  background: #e53935;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.cart-total {
-  text-align: right;
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 25px;
-}
-
-.clear-button {
-  display: block;
-  margin: 20px auto;
-  border: none;
-  background: #e53935;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* CHECKOUT */
-.checkout-section {
-  background: #f4f6f8;
-}
-
-.checkout-container {
-  max-width: 650px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-.checkout-form input,
-.checkout-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #d5dbe1;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-.checkout-form button {
-  width: 100%;
-  border: none;
-  padding: 15px;
-  background: #19a957;
-  color: white;
-  border-radius: 9px;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#orderMessage {
-  margin-top: 20px;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* CONTACT */
-.contact {
-  background: #101828;
-  color: white;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.contact p {
-  margin: 12px 0;
-  font-size: 18px;
-}
-
-.contact a {
-  color: #28e36c;
-  font-weight: bold;
-}
-
-.whatsapp-contact {
-  color: #25d366 !important;
-}
-
-/* FOOTER */
-footer {
-  background: #071827;
-  color: #bfc9d4;
-  text-align: center;
-  padding: 25px 15px;
-}
-
-footer strong {
-  color: white;
-}
-
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-  padding: 20px;
-}
-
-.modal-content {
-  background: white;
-  max-width: 500px;
-  margin: 8% auto;
-  padding: 30px;
-  border-radius: 18px;
-  text-align: center;
-  position: relative;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 18px;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.modal-icon {
-  font-size: 80px;
-  margin: 20px;
-}
-
-.modal-content h2 {
-  margin-bottom: 10px;
-}
-
-.modal-content p {
-  color: #68727d;
-  margin-bottom: 15px;
-}
-
-.modal-price {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-/* BACK TO TOP */
-#topButton {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  background: #19a957;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-  z-index: 1500;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h2 {
-    font-size: 38px;
-  }
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 27px;
-  }
-
-  nav {
-    gap: 4px;
-  }
-
-  nav a {
-    padding: 8px 9px;
-    font-size: 14px;
-  }
-
-  .hero {
-    min-height: 450px;
-  }
-
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 17px;
-  }
-
-  .products {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 30px;
-  }
-
-  .cart-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cart-total {
-    text-align: center;
-  }
-
-  .checkout-container {
-    padding: 20px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header>
-  <h1>Smart<span class="logo-green">Electronics</span></h1>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#cart" class="cart-nav">
-      🛒 Cart (<span id="cartCount">0</span>)
-    </a>
-    <a href="#checkout">Checkout</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h2>Smart Technology for Everyday Life</h2>
-
-    <p>
-      Quality smartphones, laptops, headphones, smart watches
-      and modern electronics at affordable prices.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#products" class="btn btn-primary">
-        🛍️ Shop Now
-      </a>
-
-      <a
-        href="https://wa.me/254716127023"
-        target="_blank"
-        class="btn btn-whatsapp"
-      >
-        💬 WhatsApp Us
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- BENEFITS -->
-<div class="benefits">
-
-  <div class="benefit">
-    <div class="benefit-icon">🚚</div>
-    <h3>Fast Delivery</h3>
-    <p>Delivery across Kenya</p>
-  </div>
-
-  <div class="benefit">
-    <div class="benefit-icon">💳</div>
-    <h3>Easy Ordering</h3>
-    <p>Order directly through WhatsApp</p>
-  </div>
-
-  <div class="benefit">
-    <div class="benefit-icon">🛡️</div>
-    <h3>Quality Products</h3>
-    <p>Modern electronics</p>
-  </div>
-
-</div>
-
-<!-- PRODUCTS -->
-<section id="products">
-
-  <h2 class="section-title">Featured Products</h2>
-
-  <p class="section-subtitle">
-    Find the technology you need at great prices.
-  </p>
-
-  <div class="products">
-
-    <!-- SMARTPHONE -->
-    <div
-      class="product"
-      onclick="showProduct('Smartphones','📱','From KSh 15,000','Modern smartphones for work, school, entertainment and everyday communication.')"
-    >
-      <span class="badge">Popular</span>
-
-      <div class="product-icon">📱</div>
-
-      <h3>Smartphones</h3>
-
-      <p>
-        Modern smartphones for work and entertainment.
-      </p>
-
-      <div class="price">
-        From KSh 15,000
-      </div>
-
-      <button
-        class="buy-button"
-        onclick="event.stopPropagation(); addToCart('Smartphone',15000,'📱')"
-      >
-        Add to Cart
-      </button>
-    </div>
-
-    <!-- LAPTOP -->
-    <div
-      class="product"
-      onclick="showProduct('Laptops','💻','From KSh 35,000','Reliable laptops for business, school, work and home.')"
-    >
-      <div class="product-icon">💻</div>
-
-      <h3>Laptops</h3>
-
-      <p>
-        Reliable laptops for business, school and home.
-      </p>
-
-      <div class="price">
-        From KSh 35,000
-      </div>
-
-      <button
-        class="buy-button"
-        onclick="event.stopPropagation(); addToCart('Laptop',35000,'💻')"
-      >
-        Add to Cart
-      </button>
-    </div>
-
-    <!-- HEADPHONES -->
-    <div
-      class="product"
-      onclick="showProduct('Headphones','🎧','From KSh 2,500','Enjoy clear sound wherever you go.')"
-    >
-      <span class="badge">Hot</span>
-
-      <div class="product-icon">🎧</div>
-
-      <h3>Headphones</h3>
-
-      <p>
-        Enjoy clear sound wherever you go.
-      </p>
-
-      <div class="price">
-        From KSh 2,500
-      </div>
-
-      <button
-        class="buy-button"
-        onclick="event.stopPropagation(); addToCart('Headphones',2500,'🎧')"
-      >
-        Add to Cart
-      </button>
-    </div>
-
-    <!-- SMART WATCH -->
-    <div
-      class="product"
-      onclick="showProduct('Smart Watches','⌚','From KSh 4,500','Stay connected and track your daily activities.')"
-    >
-      <div class="product-icon">⌚</div>
-
-      <h3>Smart Watches</h3>
-
-      <p>
-        Stay connected and track your daily activities.
-      </p>
-
-      <div class="price">
-        From KSh 4,500
-      </div>
-
-      <button
-        class="buy-button"
-        onclick="event.stopPropagation(); addToCart('Smart Watch',4500,'⌚')"
-      >
-        Add to Cart
-      </button>
-    </div>
-
-  </div>
-</section>
-
-<!-- CART -->
-<section class="cart-section" id="cart">
-
-  <div class="cart-container">
-
-    <h2 class="section-title">
-      🛒 Your Shopping Cart
-    </h2>
-
-    <p
-      id="emptyCart"
-      style="text-align:center; color:#707985; margin-top:20px;"
-    >
-      Your cart is empty.
-    </p>
-
-    <div id="cartItems"></div>
-
-    <div class="cart-total">
-      Total: KSh <span id="cartTotal">0</span>
-    </div>
-
-    <button
-      class="clear-button"
-      onclick="clearCart()"
-    >
-      Clear Cart
-    </button>
-
-  </div>
-</section>
-
-<!-- CHECKOUT -->
-<section class="checkout-section" id="checkout">
-
-  <div class="checkout-container">
-
-    <h2 class="section-title">
-      🛍️ Checkout
-    </h2>
-
-    <p class="section-subtitle">
-      Enter your details and place your order through WhatsApp.
-    </p>
-
-    <form
-      class="checkout-form"
-      id="checkoutForm"
-    >
-
-      <input
-        type="text"
-        id="customerName"
-        placeholder="Your full name"
-        required
-      >
-
-      <input
-        type="tel"
-        id="customerPhone"
-        placeholder="Phone number"
-        required
-      >
-
-      <input
-        type="text"
-        id="customerLocation"
-        placeholder="Delivery location"
-        required
-      >
-
-      <textarea
-        id="customerNote"
-        rows="4"
-        placeholder="Additional message (optional)"
-      ></textarea>
-
-      <button type="submit">
-        💬 Place Order on WhatsApp
-      </button>
-
-    </form>
-
-    <div id="orderMessage"></div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-  <h2>Contact Smart Electronics</h2>
-
-  <p>
-    📞 Phone:
-    <a href="tel:+254716127023">
-      +254 716 127 023
-    </a>
-  </p>
-
-  <p>
-    💬 WhatsApp:
-    <a
-      class="whatsapp-contact"
-      href="https://wa.me/254716127023"
-      target="_blank"
-    >
-      +254 716 127 023
-    </a>
-  </p>
-
-  <p>
-    📧 Email:
-    <a href="mailto:info@smartelectronics.com">
-      info@smartelectronics.com
-    </a>
-  </p>
-
-  <p>
-    📍 Kenya
-  </p>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>
-    © 2026 <strong>Smart Electronics</strong>.
-    All rights reserved.
-  </p>
-
-  <p>
-    Quality electronics at affordable prices.
-  </p>
-</footer>
-
-<!-- PRODUCT MODAL -->
-<div
-  class="modal"
-  id="productModal"
-  onclick="closeModal(event)"
->
-
-  <div class="modal-content">
-
-    <span
-      class="close-modal"
-      onclick="closeProductModal()"
-    >
-      ×
-    </span>
-
-    <div
-      class="modal-icon"
-      id="modalIcon"
-    >
-      📱
-    </div>
-
-    <h2 id="modalName">
-      Product
-    </h2>
-
-    <p id="modalDescription">
-      Product description
-    </p>
-
-    <div
-      class="modal-price"
-      id="modalPrice"
-    >
-      KSh 0
-    </div>
-
-    <button
-      class="buy-button"
-      id="modalCartButton"
-    >
-      Add to Cart
-    </button>
-
-  </div>
-
-</div>
-
-<!-- BACK TO TOP -->
-<button
-  id="topButton"
-  onclick="window.scrollTo({top:0,behavior:'smooth'})"
->
-  ↑
-</button>
-
-<script>
-
-/* =========================
-   CART
-========================= */
-
-let cart = JSON.parse(
-  localStorage.getItem("smartCart") || "[]"
-);
-
-function saveCart() {
-  localStorage.setItem(
-    "smartCart",
-    JSON.stringify(cart)
-  );
-}
-
-function addToCart(name, price, icon) {
-
-  const existing = cart.find(
-    item => item.name === name
-  );
-
-  if (existing) {
-    existing.quantity++;
-  } else {
-    cart.push({
-      name: name,
-      price: price,
-      icon: icon,
-      quantity: 1
-    });
-  }
-
-  saveCart();
-  displayCart();
-
-  alert(name + " added to your cart! 🛒");
-}
-
-function displayCart() {
-
-  const cartItems =
-    document.getElementById("cartItems");
-
-  const emptyCart =
-    document.getElementById("emptyCart");
-
-  const cartTotal =
-    document.getElementById("cartTotal");
-
-  const cartCount =
-    document.getElementById("cartCount");
-
-  cartItems.innerHTML = "";
-
-  let total = 0;
-  let count = 0;
-
-  if (cart.length === 0) {
-
-    emptyCart.style.display = "block";
-
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Electronics Kenya - Quality smartphones, laptops, headphones and smart watches at affordable prices.">
+  <title>Smart Electronics Kenya</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #172033;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #081827;
+      color: white;
+      text-align: center;
+      padding: 24px 15px 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.18);
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 6px;
+      font-weight: 800;
+    }
+
+    .brand-green {
+      color: #18b957;
+    }
+
+    header p {
+      color: #d8e2eb;
+      font-size: 15px;
+      margin-bottom: 17px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    nav a,
+    .cart-nav-button {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 13px;
+      border-radius: 8px;
+      transition: 0.2s ease;
+      border: none;
+      background: transparent;
+    }
+
+    nav a:hover,
+    nav a:active {
+      background: #14283c;
+    }
+
+    .cart-nav-button {
+      background: #16a957;
+      min-width: 115px;
+    }
+
+    .cart-nav-button:hover,
+    .cart-nav-button:active {
+      background: #0e8d47;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 430px;
+      padding: 70px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(4,20,34,0.78), rgba(4,20,34,0.88)),
+        linear-gradient(135deg, #12334b, #071521);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
+
+    .hero h2 span {
+      color: #18c75f;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #e4edf4;
+      font-size: 19px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .primary-button,
+    .whatsapp-button {
+      border: none;
+      border-radius: 9px;
+      padding: 14px 25px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+
+    .primary-button {
+      background: #17ad57;
+    }
+
+    .primary-button:hover,
+    .primary-button:active {
+      background: #0d8d45;
+      transform: translateY(-1px);
+    }
+
+    .whatsapp-button {
+      background: #20d76b;
+    }
+
+    .whatsapp-button:hover,
+    .whatsapp-button:active {
+      background: #15bd59;
+    }
+
+    /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits-section {
+      padding: 30px 20px;
+      background: #f4f6f8;
+    }
+
+    .benefits {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(18,32,51,0.10);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 38px 20px;
+      border-right: 1px solid #e6e9ed;
+    }
+
+    .benefit:last-child {
+      border-right: none;
+    }
+
+    .benefit-icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .benefit h3 {
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .benefit p {
+      color: #7b8490;
+      font-size: 16px;
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products-section {
+      padding: 65px 20px;
+      background: #f4f6f8;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #737d89;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
+
+    .products-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 7px 20px rgba(18,32,51,0.10);
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 410px;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(18,32,51,0.14);
+    }
+
+    .product-icon {
+      font-size: 75px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .product-description {
+      color: #7a838d;
+      font-size: 16px;
+      margin-bottom: 18px;
+      min-height: 48px;
+    }
+
+    .price {
+      font-size: 25px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      margin-top: auto;
+    }
+
+    .buy-button {
+      width: 100%;
+      border: none;
+      border-radius: 9px;
+      padding: 
