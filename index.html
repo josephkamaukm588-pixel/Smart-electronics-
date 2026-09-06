@@ -179,7 +179,75 @@ border-radius: 10px;
         font-size: 28px;
       }
     }
-  </style>
+  /* ===== Smart Electronics Store Upgrade ===== */
+
+nav a {
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+.btn {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+.products {
+    gap: 24px;
+}
+
+.card,
+.product-card {
+    transition: 0.25s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.card:hover,
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.card img,
+.product-card img {
+    transition: 0.3s ease;
+}
+
+.card:hover img,
+.product-card:hover img {
+    transform: scale(1.03);
+}
+
+.price {
+    font-weight: 800;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 6px 4px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    }</style>
 </head>
 
 <body>
