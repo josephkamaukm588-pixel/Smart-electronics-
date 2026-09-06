@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
 content="Smart Electronics Kenya - smartphones, laptops, headphones, smart watches and accessories.">
@@ -11,117 +15,126 @@ content="Smart Electronics Kenya - smartphones, laptops, headphones, smart watch
 
 <style>
 
-:root{
-  --navy:#0f172a;
-  --navy2:#111827;
-  --blue:#2563eb;
-  --green:#16a34a;
-  --green2:#22c55e;
-  --light:#f8fafc;
-  --muted:#64748b;
-  --border:#e2e8f0;
-  --white:#ffffff;
-  --danger:#dc2626;
-  --shadow:0 10px 30px rgba(15,23,42,.08);
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+:root {
+  --navy: #0f172a;
+  --navy2: #111827;
+  --blue: #2563eb;
+  --green: #16a34a;
+  --green2: #22c55e;
+  --light: #f8fafc;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --white: #ffffff;
+  --danger: #dc2626;
+  --whatsapp: #25d366;
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--light);
-  color:#172033;
-  line-height:1.5;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: #172033;
+  line-height: 1.5;
 }
 
-a{
-  color:inherit;
+a {
+  color: inherit;
 }
 
 button,
-input{
-  font:inherit;
+input {
+  font: inherit;
 }
 
-.container{
-  width:min(1120px,92%);
-  margin:auto;
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(15,23,42,.97);
-  color:white;
-  box-shadow:0 4px 20px rgba(0,0,0,.12);
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15,23,42,.97);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,.12);
 }
 
-.navbar{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.logo{
-  color:white;
-  text-decoration:none;
-  font-size:22px;
-  font-weight:800;
-  white-space:nowrap;
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
 }
 
-.logo span{
-  color:#60a5fa;
+.logo span {
+  color: #60a5fa;
 }
 
-nav{
-  display:flex;
-  align-items:center;
-  gap:22px;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
 }
 
-nav a{
-  color:#e5e7eb;
-  text-decoration:none;
-  font-weight:700;
-  transition:.2s;
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-nav a:hover{
-  color:#60a5fa;
+nav a:hover {
+  color: #60a5fa;
 }
 
-.cart-link{
-  background:var(--green);
-  padding:9px 13px;
-  border-radius:10px;
-  color:white!important;
+.cart-link {
+  background: var(--green);
+  padding: 9px 13px;
+  border-radius: 10px;
+  color: white !important;
 }
 
-.menu-btn{
-  display:none;
-  background:none;
-  border:0;
-  color:white;
-  font-size:28px;
+.menu-btn {
+  display: none;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
-.hero{
+.hero {
   background:
     radial-gradient(
       circle at 15% 20%,
@@ -130,1259 +143,1346 @@ nav a:hover{
     ),
     linear-gradient(135deg,#0f172a,#1e3a8a);
 
-  color:white;
-  padding:80px 0;
+  color: white;
+  padding: 80px 0;
 }
 
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:40px;
-  align-items:center;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 40px;
+  align-items: center;
 }
 
-.badge{
-  display:inline-block;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.2);
-  padding:7px 12px;
-  border-radius:999px;
-  margin-bottom:18px;
-  font-weight:700;
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  padding: 7px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  font-weight: 700;
 }
 
-.hero h1{
-  font-size:clamp(38px,6vw,64px);
-  line-height:1.05;
-  margin-bottom:18px;
+.hero h1 {
+  font-size: clamp(38px,6vw,64px);
+  line-height: 1.05;
+  margin-bottom: 18px;
 }
 
-.hero h1 span{
-  color:#60a5fa;
+.hero h1 span {
+  color: #60a5fa;
 }
 
-.hero p{
-  font-size:19px;
-  color:#dbeafe;
-  max-width:650px;
-  margin-bottom:28px;
+.hero p {
+  font-size: 19px;
+  color: #dbeafe;
+  max-width: 650px;
+  margin-bottom: 28px;
 }
 
-.hero-actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border:0;
-  border-radius:10px;
-  padding:13px 20px;
-  text-decoration:none;
-  font-weight:800;
-  cursor:pointer;
-  transition:.2s;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
+.btn-primary {
+  background: var(--green);
+  color: white;
 }
 
-.btn-primary{
-  background:var(--green);
-  color:white;
+.btn-secondary {
+  background: white;
+  color: var(--navy);
 }
 
-.btn-secondary{
-  background:white;
-  color:var(--navy);
+.hero-card {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 22px;
+  padding: 28px;
+  text-align: center;
 }
 
-.hero-card{
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:22px;
-  padding:28px;
-  text-align:center;
-  backdrop-filter:blur(8px);
+.hero-card .emoji {
+  font-size: 90px;
 }
 
-.hero-card .emoji{
-  font-size:90px;
+.hero-card h3 {
+  font-size: 25px;
+  margin: 10px 0;
 }
 
-.hero-card h3{
-  font-size:25px;
-  margin:10px 0;
+.hero-card p {
+  font-size: 15px;
+  margin: 0;
+  color: #dbeafe;
 }
 
-.hero-card p{
-  font-size:15px;
-  margin:0;
-  color:#dbeafe;
-}
+/* =========================
+   STATS
+========================= */
 
-/* STATS */
-
-.stats{
-  background:white;
-  border-bottom:1px solid var(--border);
+.stats {
+  background: white;
+  border-bottom: 1px solid var(--border);
 }
 
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  text-align:center;
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align: center;
 }
 
-.stat{
-  padding:24px;
-  border-right:1px solid var(--border);
+.stat {
+  padding: 24px;
+  border-right: 1px solid var(--border);
 }
 
-.stat:last-child{
-  border-right:0;
+.stat:last-child {
+  border-right: 0;
 }
 
-.stat strong{
-  display:block;
-  font-size:25px;
-  color:var(--navy);
+.stat strong {
+  display: block;
+  font-size: 25px;
+  color: var(--navy);
 }
 
-.stat span{
-  color:var(--muted);
+.stat span {
+  color: var(--muted);
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
-section{
-  scroll-margin-top:90px;
+section {
+  scroll-margin-top: 90px;
 }
 
-.section{
-  padding:65px 0;
+.section {
+  padding: 65px 0;
 }
 
-.section-head{
-  text-align:center;
-  margin-bottom:32px;
+.section-head {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.section-head h2{
-  font-size:34px;
-  color:var(--navy);
-  margin-bottom:8px;
+.section-head h2 {
+  font-size: 34px;
+  color: var(--navy);
+  margin-bottom: 8px;
 }
 
-.section-head p{
-  color:var(--muted);
+.section-head p {
+  color: var(--muted);
 }
 
-/* CATEGORIES */
+/* =========================
+   CATEGORIES
+========================= */
 
-.categories{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:30px;
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
-.category{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:999px;
-  padding:9px 15px;
-  color:var(--navy);
-  font-weight:700;
+.category {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 9px 15px;
+  color: var(--navy);
+  font-weight: 700;
 }
+
+/* =========================
+   PRODUCTS
+========================= */
 
-/* PRODUCTS */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
 
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+.product {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: .25s;
+  display: flex;
+  flex-direction: column;
 }
 
-.product{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  transition:.25s;
-  display:flex;
-  flex-direction:column;
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(15,23,42,.13);
 }
 
-.product:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 35px rgba(15,23,42,.13);
+.product-image {
+  height: 210px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
 }
 
-.product-image{
-  height:210px;
-  background:#f1f5f9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  cursor:pointer;
-  position:relative;
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
 }
 
-.product-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.3s;
+.product-image:hover img {
+  transform: scale(1.07);
 }
 
-.product-image:hover img{
-  transform:scale(1.07);
+.photo-hint {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15,23,42,.78);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-.photo-hint{
-  position:absolute;
-  bottom:10px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(15,23,42,.78);
-  color:white;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
+.product-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.product-body{
-  padding:18px;
-  display:flex;
-  flex-direction:column;
-  flex:1;
+.product h3 {
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 7px;
 }
 
-.product h3{
-  font-size:20px;
-  color:var(--navy);
-  margin-bottom:7px;
+.product p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+  flex: 1;
 }
 
-.product p{
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:12px;
-  flex:1;
+.price {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 14px;
 }
 
-.price{
-  font-size:20px;
-  font-weight:900;
-  color:var(--navy);
-  margin-bottom:14px;
+.buy-button {
+  width: 100%;
+  border: 0;
+  background: var(--green);
+  color: white;
+  padding: 12px;
+  border-radius: 9px;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-.buy-button{
-  width:100%;
-  border:0;
-  background:var(--green);
-  color:white;
-  padding:12px;
-  border-radius:9px;
-  font-weight:800;
-  cursor:pointer;
-  transition:.2s;
+.buy-button:hover {
+  background: #15803d;
 }
 
-.buy-button:hover{
-  background:#15803d;
-  transform:scale(1.02);
+/* =========================
+   PRODUCT DETAILS MODAL
+========================= */
+
+.product-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  background: rgba(0,0,0,.78);
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-/* PHOTO MODAL */
+.product-modal.show {
+  display: flex;
+}
 
-.photo-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.88);
-  z-index:3000;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+.product-modal-box {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  max-height: 94vh;
+  overflow-y: auto;
 }
 
-.photo-modal.show{
-  display:flex;
+.product-modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  color: #111827;
+  font-size: 29px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
 }
 
-.photo-modal-content{
-  max-width:900px;
-  width:100%;
-  text-align:center;
-  position:relative;
+.modal-product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
 
-.photo-modal img{
-  max-width:100%;
-  max-height:75vh;
-  border-radius:14px;
-  object-fit:contain;
-  box-shadow:0 10px 40px rgba(0,0,0,.4);
+.modal-product-content {
+  padding: 25px;
 }
 
-.photo-modal h3{
-  color:white;
-  margin-top:15px;
-  font-size:24px;
+.modal-product-content h2 {
+  color: var(--navy);
+  font-size: 28px;
+  margin-bottom: 8px;
 }
 
-.close-photo{
-  position:absolute;
-  right:0;
-  top:-50px;
-  width:44px;
-  height:44px;
-  border:0;
-  border-radius:50%;
-  background:white;
-  color:#111827;
-  font-size:28px;
-  font-weight:bold;
-  cursor:pointer;
+.modal-product-price {
+  color: var(--green);
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 15px;
 }
 
-/* CONTACT */
+.modal-product-content p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
 
-.contact{
-  background:var(--navy);
-  color:white;
-  padding:60px 0;
-  text-align:center;
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.contact h2{
-  font-size:32px;
-  margin-bottom:22px;
+.modal-cart-button,
+.modal-whatsapp-button {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.contact-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+.modal-cart-button {
+  background: var(--green);
+  color: white;
 }
 
-.contact-card{
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;
-  padding:20px;
+.modal-whatsapp-button {
+  background: var(--whatsapp);
+  color: white;
 }
 
-.contact-card .icon{
-  font-size:27px;
-  margin-bottom:8px;
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  background: var(--navy);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
 }
 
-.contact-card strong{
-  display:block;
-  margin-bottom:5px;
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 22px;
 }
 
-.contact-card a{
-  color:#93c5fd;
-  text-decoration:none;
-  font-weight:700;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
 }
 
-.contact-card a:hover{
-  text-decoration:underline;
+.contact-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px;
+  padding: 20px;
 }
 
-/* CART */
+.contact-card .icon {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
 
-.cart-section{
-  background:#eef2f7;
+.contact-card strong {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.cart-box{
-  max-width:850px;
-  margin:auto;
+.contact-card a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-.cart-item{
-  background:white;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:15px;
-  margin:10px 0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
+/* =========================
+   CART
+========================= */
+
+.cart-section {
+  background: #eef2f7;
 }
 
-.cart-controls{
-  display:flex;
-  align-items:center;
-  gap:5px;
-  flex-wrap:wrap;
+.cart-box {
+  max-width: 850px;
+  margin: auto;
 }
 
-.cart-controls button{
-  border:0;
-  border-radius:7px;
-  padding:8px 11px;
-  cursor:pointer;
-  background:#e2e8f0;
+.cart-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
 }
 
-.remove-button{
-  background:var(--danger)!important;
-  color:white;
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
-.cart-total{
-  text-align:right;
-  font-size:24px;
-  font-weight:900;
-  margin:25px 0;
+.cart-controls button {
+  border: 0;
+  border-radius: 7px;
+  padding: 8px 11px;
+  cursor: pointer;
+  background: #e2e8f0;
 }
 
-.clear-button{
-  background:var(--danger);
-  color:white;
-  border:0;
-  padding:11px 17px;
-  border-radius:8px;
-  cursor:pointer;
+.remove-button {
+  background: var(--danger) !important;
+  color: white;
 }
 
-.empty{
-  text-align:center;
-  color:var(--muted);
-  padding:15px;
+.cart-total {
+  text-align: right;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 25px 0;
 }
 
-/* CHECKOUT */
+.clear-button {
+  background: var(--danger);
+  color: white;
+  border: 0;
+  padding: 11px 17px;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-.checkout-section{
-  background:white;
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 15px;
 }
+
+/* =========================
+   CHECKOUT
+========================= */
 
-.checkout-form{
-  max-width:600px;
-  margin:auto;
+.checkout-section {
+  background: white;
 }
 
-.input{
-  width:100%;
-  padding:14px;
-  margin:7px 0;
-  border:1px solid #cbd5e1;
-  border-radius:9px;
-  outline:none;
+.checkout-form {
+  max-width: 600px;
+  margin: auto;
 }
 
-.input:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px rgba(37,99,235,.12);
+.input {
+  width: 100%;
+  padding: 14px;
+  margin: 7px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
 }
 
-.checkout-button{
-  width:100%;
-  margin-top:8px;
-  background:var(--green);
-  color:white;
-  border:0;
-  padding:14px;
-  border-radius:9px;
-  font-weight:800;
-  cursor:pointer;
+.input:focus {
+  border-color: var(--blue);
 }
 
-.checkout-button:hover{
-  background:#15803d;
+.checkout-button {
+  width: 100%;
+  margin-top: 8px;
+  background: var(--green);
+  color: white;
+  border: 0;
+  padding: 14px;
+  border-radius: 9px;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-#orderMessage{
-  margin-top:18px;
-  padding:15px;
-  border-radius:10px;
-  background:#f0fdf4;
-  color:#166534;
-  font-weight:700;
-  display:none;
+#orderMessage {
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f0fdf4;
+  color: #166534;
+  font-weight: 700;
+  display: none;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
-footer{
-  background:#080d18;
-  color:#94a3b8;
-  text-align:center;
-  padding:24px;
+footer {
+  background: #080d18;
+  color: #94a3b8;
+  text-align: center;
+  padding: 24px;
 }
 
-/* FLOATING WHATSAPP */
+/* =========================
+   FLOATING WHATSAPP
+========================= */
 
-.whatsapp-float{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:58px;
-  height:58px;
-  background:#25D366;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-decoration:none;
-  font-size:28px;
-  box-shadow:0 5px 18px rgba(0,0,0,.25);
-  z-index:2000;
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 58px;
+  height: 58px;
+  background: var(--whatsapp);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 28px;
+  box-shadow: 0 5px 18px rgba(0,0,0,.25);
+  z-index: 2000;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:900px){
+@media(max-width:900px) {
 
-  .product-grid{
-    grid-template-columns:repeat(2,1fr);
+  .product-grid {
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .contact-grid{
-    grid-template-columns:repeat(2,1fr);
+  .contact-grid {
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .hero-grid{
-    grid-template-columns:1fr;
+  .hero-grid {
+    grid-template-columns: 1fr;
   }
 
 }
 
-@media(max-width:650px){
+@media(max-width:650px) {
 
-  .navbar{
-    min-height:64px;
+  .navbar {
+    min-height: 64px;
   }
 
-  .menu-btn{
-    display:block;
+  .menu-btn {
+    display: block;
   }
 
-  nav{
-    display:none;
-    position:absolute;
-    left:0;
-    right:0;
-    top:64px;
-    background:var(--navy);
-    padding:18px;
-    flex-direction:column;
+  nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    background: var(--navy);
+    padding: 18px;
+    flex-direction: column;
   }
 
-  nav.open{
-    display:flex;
+  nav.open {
+    display: flex;
   }
 
-  .hero{
-    padding:55px 0;
+  .hero {
+    padding: 55px 0;
   }
 
-  .hero-card{
-    display:none;
+  .hero-card {
+    display: none;
   }
 
-  .stats-grid{
-    grid-template-columns:1fr;
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 
-  .stat{
-    border-right:0;
-    border-bottom:1px solid var(--border);
+  .stat {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
   }
 
-  .stat:last-child{
-    border-bottom:0;
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 
-  .product-grid{
-    grid-template-columns:1fr;
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
-  .contact-grid{
-    grid-template-columns:1fr;
+  .cart-item {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  .cart-item{
-    align-items:flex-start;
-    flex-direction:column;
+  .modal-product-image {
+    height: 220px;
   }
 
-  .photo-modal{
-    padding:12px;
+  .modal-buttons {
+    flex-direction: column;
   }
 
-  .photo-modal img{
-    max-height:65vh;
-  }
-
-  .close-photo{
-    top:-55px;
-    right:0;
+  .modal-cart-button,
+  .modal-whatsapp-button {
+    width: 100%;
   }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-  <div class="container navbar">
+<div class="container navbar">
 
-    <a href="#home" class="logo">
-      ⚡ Smart <span>Electronics</span>
-    </a>
+<a href="#home" class="logo">
+⚡ Smart <span>Electronics</span>
+</a>
 
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Open menu">
-      ☰
-    </button>
+<button
+class="menu-btn"
+id="menuBtn"
+type="button">
+☰
+</button>
 
-    <nav id="mainNav">
+<nav id="mainNav">
 
-      <a href="#home">Home</a>
+<a href="#home">Home</a>
 
-      <a href="#products">Products</a>
+<a href="#products">Products</a>
 
-      <a href="#contact">Contact</a>
+<a href="#contact">Contact</a>
 
-      <a href="#cart" class="cart-link">
-        🛒 Cart <span id="cartCount">(0)</span>
-      </a>
+<a href="#checkout">Checkout</a>
 
-    </nav>
+<a href="#cart" class="cart-link">
+🛒 Cart (<span id="cartCount">0</span>)
+</a>
 
-  </div>
+</nav>
+
+</div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-  <div class="container hero-grid">
-
-    <div>
-
-      <span class="badge">
-        🇰🇪 Serving customers in Kenya
-      </span>
-
-      <h1>
-        Smart technology.<br>
-        <span>Simple shopping.</span>
-      </h1>
-
-      <p>
-        Shop smartphones, laptops, headphones,
-        smart watches and more from Smart Electronics.
-      </p>
-
-      <div class="hero-actions">
-
-        <a href="#products" class="btn btn-primary">
-          🛍️ Shop Products
-        </a>
-
-        <a
-          href="https://wa.me/254716127023?text=Hello%20Smart%20Electronics%2C%20I%20would%20like%20to%20make%20an%20inquiry."
-          target="_blank"
-          class="btn btn-secondary">
-
-          💬 WhatsApp Us
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-card">
-
-      <div class="emoji">
-        📱💻🎧⌚
-      </div>
-
-      <h3>
-        Quality Electronics
-      </h3>
-
-      <p>
-        Easy ordering through our website and WhatsApp.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- STATS -->
-
-<section class="stats">
-
-  <div class="container stats-grid">
-
-    <div class="stat">
-
-      <strong>4+</strong>
-
-      <span>
-        Product categories
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>🇰🇪 Kenya</strong>
-
-      <span>
-        Local delivery focus
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <strong>💬 WhatsApp</strong>
-
-      <span>
-        Fast order communication
-      </span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section class="section" id="products">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <h2>
-        Featured Products
-      </h2>
-
-      <p>
-        Tap a product photo to view it larger,
-        or add a product to your shopping cart.
-      </p>
-
-    </div>
-
-
-    <div class="categories">
-
-      <span class="category">
-        📱 Smartphones
-      </span>
-
-      <span class="category">
-        💻 Laptops
-      </span>
-
-      <span class="category">
-        🎧 Audio
-      </span>
-
-      <span class="category">
-        ⌚ Smart Watches
-      </span>
-
-    </div>
-
-
-    <div class="product-grid">
-
-
-      <!-- SMARTPHONES -->
-
-      <article class="product">
-
-        <div
-          class="product-image"
-          onclick="openPhoto(
-          'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=90',
-          'Smartphones'
-          )">
-
-          <img
-            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85"
-            alt="Smartphone">
-
-          <span class="photo-hint">
-            🔍 Tap to view
-          </span>
-
-        </div>
-
-
-        <div class="product-body">
-
-          <h3>
-            Smartphones
-          </h3>
-
-          <p>
-            Modern smartphones for work,
-            communication and entertainment.
-          </p>
-
-          <div class="price">
-            From KSh 15,000
-          </div>
-
-          <button
-            class="buy-button"
-            data-name="Smartphones"
-            data-price="15000">
-
-            Add to Cart
-
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- LAPTOPS -->
-
-      <article class="product">
-
-        <div
-          class="product-image"
-          onclick="openPhoto(
-          'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=90',
-          'Laptops'
-          )">
-
-          <img
-            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85"
-            alt="Laptop">
-
-          <span class="photo-hint">
-            🔍 Tap to view
-          </span>
-
-        </div>
-
-
-        <div class="product-body">
-
-          <h3>
-            Laptops
-          </h3>
-
-          <p>
-            Reliable laptops for business,
-            school, work and home.
-          </p>
-
-          <div class="price">
-            From KSh 35,000
-          </div>
-
-          <button
-            class="buy-button"
-            data-name="Laptops"
-            data-price="35000">
-
-            Add to Cart
-
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- HEADPHONES -->
-
-      <article class="product">
-
-        <div
-          class="product-image"
-          onclick="openPhoto(
-          'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=90',
-          'Headphones'
-          )">
-
-          <img
-            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=85"
-            alt="Headphones">
-
-          <span class="photo-hint">
-            🔍 Tap to view
-          </span>
-
-        </div>
-
-
-        <div class="product-body">
-
-          <h3>
-            Headphones
-          </h3>
-
-          <p>
-            Enjoy clear sound, calls and entertainment
-            wherever you go.
-          </p>
-
-          <div class="price">
-            From KSh 2,500
-          </div>
-
-          <button
-            class="buy-button"
-            data-name="Headphones"
-            data-price="2500">
-
-            Add to Cart
-
-          </button>
-
-        </div>
-
-      </article>
-
-
-      <!-- SMART WATCHES -->
-
-      <article class="product">
-
-        <div
-          class="product-image"
-          onclick="openPhoto(
-          'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=90',
-          'Smart Watches'
-          )">
-
-          <img
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85"
-            alt="Smart Watch">
-
-          <span class="photo-hint">
-            🔍 Tap to view
-          </span>
-
-        </div>
-
-
-        <div class="product-body">
-
-          <h3>
-            Smart Watches
-          </h3>
-
-          <p>
-            Stay connected and track your daily
-            activities in style.
-          </p>
-
-          <div class="price">
-            From KSh 4,500
-          </div>
-
-          <button
-            class="buy-button"
-            data-name="Smart Watches"
-            data-price="4500">
-
-            Add to Cart
-
-          </button>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PHOTO VIEWER -->
-
-<div
-  class="photo-modal"
-  id="photoModal"
-  onclick="closePhoto(event)">
-
-  <div class="photo-modal-content">
-
-    <button
-      class="close-photo"
-      onclick="closePhoto()">
-
-      ×
-
-    </button>
-
-    <img
-      id="largePhoto"
-      src=""
-      alt="Large product photo">
-
-    <h3 id="photoTitle"></h3>
-
-  </div>
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+🇰🇪 Electronics Store in Kenya
+</div>
+
+<h1>
+Smart Technology.
+<br>
+<span>Smart Choices.</span>
+</h1>
+
+<p>
+Shop smartphones, laptops, headphones,
+smart watches and other modern electronics
+at affordable prices.
+</p>
+
+<div class="hero-actions">
+
+<a
+href="#products"
+class="btn btn-primary">
+🛍️ Shop Products
+</a>
+
+<a
+href="https://wa.me/254716127023"
+target="_blank"
+class="btn btn-secondary">
+💬 WhatsApp Us
+</a>
+
+</div>
 
 </div>
 
 
-<!-- CONTACT -->
+<div class="hero-card">
 
-<section
-  class="contact"
-  id="contact">
+<div class="emoji">
+📱💻
+</div>
 
-  <div class="container">
+<h3>
+Quality Electronics
+</h3>
 
-    <h2>
-      Contact Smart Electronics
-    </h2>
+<p>
+Modern technology for work,
+school, entertainment and everyday life.
+</p>
 
+</div>
 
-    <div class="contact-grid">
-
-
-      <div class="contact-card">
-
-        <div class="icon">
-          📞
-        </div>
-
-        <strong>
-          Phone
-        </strong>
-
-        <p>
-          <a href="tel:+254716127023">
-            +254 716 127 023
-          </a>
-        </p>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="icon">
-          💬
-        </div>
-
-        <strong>
-          WhatsApp
-        </strong>
-
-        <p>
-
-          <a
-            href="https://wa.me/254716127023"
-            target="_blank">
-
-            Chat with us
-
-          </a>
-
-        </p>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="icon">
-          📧
-        </div>
-
-        <strong>
-          Email
-        </strong>
-
-        <p>
-
-          <a href="mailto:info@smartelectronics.com">
-
-            info@smartelectronics.com
-
-          </a>
-
-        </p>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <div class="icon">
-          📍
-        </div>
-
-        <strong>
-          Location
-        </strong>
-
-        <p>
-          Kenya
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- SHOPPING CART -->
+<!-- =========================
+     STATS
+========================= -->
 
-<section
-  class="section cart-section"
-  id="cart">
+<section class="stats">
 
-  <div class="container cart-box">
+<div class="container stats-grid">
 
-    <div class="section-head">
+<div class="stat">
 
-      <h2>
-        🛒 Your Shopping Cart
-      </h2>
+<strong>4+</strong>
 
-      <p>
-        Review your items before checkout.
-      </p>
+<span>
+Product Categories
+</span>
 
-    </div>
+</div>
 
+<div class="stat">
 
-    <div
-      id="cartItems"
-      class="empty">
+<strong>🇰🇪</strong>
 
-      Your cart is empty.
+<span>
+Serving Kenya
+</span>
 
-    </div>
+</div>
 
+<div class="stat">
 
-    <div
-      class="cart-total"
-      id="cartTotal">
+<strong>💬</strong>
 
-      Total: KSh 0
+<span>
+WhatsApp Ordering
+</span>
 
-    </div>
+</div>
 
-
-    <button
-      class="clear-button"
-      id="clearCart">
-
-      Clear Cart
-
-    </button>
-
-  </div>
+</div>
 
 </section>
 
 
-<!-- CHECKOUT -->
+<!-- =========================
+     PRODUCTS
+========================= -->
 
 <section
-  class="section checkout-section"
-  id="checkout">
+class="section"
+id="products">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-head">
+<div class="section-head">
 
-      <h2>
-        🛍️ Checkout
-      </h2>
+<h2>
+Featured Products
+</h2>
 
-      <p>
-        Enter your details and send your order through WhatsApp.
-      </p>
+<p>
+Choose your favourite technology.
+</p>
 
-    </div>
-
-
-    <form
-      id="checkoutForm"
-      class="checkout-form">
+</div>
 
 
-      <input
-        class="input"
-        type="text"
-        id="customerName"
-        placeholder="Your full name"
-        required>
+<div class="categories">
+
+<div class="category">
+📱 Smartphones
+</div>
+
+<div class="category">
+💻 Laptops
+</div>
+
+<div class="category">
+🎧 Headphones
+</div>
+
+<div class="category">
+⌚ Smart Watches
+</div>
+
+</div>
 
 
-      <input
-        class="input"
-        type="tel"
-        id="customerPhone"
-        placeholder="Phone number"
-        required>
+<div class="product-grid">
 
 
-      <input
-        class="input"
-        type="text"
-        id="customerLocation"
-        placeholder="Delivery location"
-        required>
+<!-- SMARTPHONE -->
+
+<article class="product">
+
+<div
+class="product-image"
+onclick="openProductModal(
+'Smartphones',
+15000,
+'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=90',
+'Modern smartphones for work, communication and entertainment.'
+)">
+
+<img
+src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85"
+alt="Smartphone">
+
+<div class="photo-hint">
+🔍 Tap to view
+</div>
+
+</div>
+
+<div class="product-body">
+
+<h3>
+Smartphones
+</h3>
+
+<p>
+Modern smartphones for work,
+communication and entertainment.
+</p>
+
+<div class="price">
+From KSh 15,000
+</div>
+
+<button
+class="buy-button"
+type="button"
+onclick="addToCart(
+'Smartphones',
+15000
+)">
+Add to Cart
+</button>
+
+</div>
+
+</article>
 
 
-      <button
-        type="submit"
-        class="checkout-button">
+<!-- LAPTOP -->
 
-  
+<article class="product">
+
+<div
+class="product-image"
+onclick="openProductModal(
+'Laptops',
+35000,
+'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=90',
+'Reliable laptops for business, school, work and home.'
+)">
+
+<img
+src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85"
+alt="Laptop">
+
+<div class="photo-hint">
+🔍 Tap to view
+</div>
+
+</div>
+
+<div class="product-body">
+
+<h3>
+Laptops
+</h3>
+
+<p>
+Reliable laptops for business,
+school, work and home.
+</p>
+
+<div class="price">
+From KSh 35,000
+</div>
+
+<button
+class="buy-button"
+type="button"
+onclick="addToCart(
+'Laptops',
+35000
+)">
+Add to Cart
+</button>
+
+</div>
+
+</article>
+
+
+<!-- HEADPHONES -->
+
+<article class="product">
+
+<div
+class="product-image"
+onclick="openProductModal(
+'Headphones',
+2500,
+'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=90',
+'Enjoy clear sound, calls and entertainment wherever you go.'
+)">
+
+<img
+src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
+alt="Headphones">
+
+<div class="photo-hint">
+🔍 Tap to view
+</div>
+
+</div>
+
+<div class="product-body">
+
+<h3>
+Headphones
+</h3>
+
+<p>
+Enjoy clear sound, calls and entertainment
+wherever you go.
+</p>
+
+<div class="price">
+From KSh 2,500
+</div>
+
+<button
+class="buy-button"
+type="button"
+onclick="addToCart(
+'Headphones',
+2500
+)">
+Add to Cart
+</button>
+
+</div>
+
+</article>
+
+
+<!-- SMART WATCH -->
+
+<article class="product">
+
+<div
+class="product-image"
+onclick="openProductModal(
+'Smart Watches',
+4500,
+'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=90',
+'Stay connected and track your daily activities.'
+)">
+
+<img
+src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+alt="Smart Watch">
+
+<div class="photo-hint">
+🔍 Tap to view
+</div>
+
+</div>
+
+<div class="product-body">
+
+<h3>
+Smart Watches
+</h3>
+
+<p>
+Stay connected and track
+your daily activities.
+</p>
+
+<div class="price">
+From KSh 4,500
+</div>
+
+<button
+class="buy-button"
+type="button"
+onclick="addToCart(
+'Smart Watches',
+4500
+)">
+Add to Cart
+</button>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCT DETAILS POPUP
+========================= -->
+
+<div
+id="productModal"
+class="product-modal">
+
+<div class="product-modal-box">
+
+<button
+class="product-modal-close"
+type="button"
+onclick="closeProductModal()">
+×
+</button>
+
+<img
+id="modalProductImage"
+class="modal-product-image"
+src=""
+alt="Product">
+
+<div class="modal-product-content">
+
+<h2 id="modalProductName">
+Product
+</h2>
+
+<div
+id="modalProductPrice"
+class="modal-product-price">
+KSh 0
+</div>
+
+<p id="modalProductDescription">
+Product description
+</p>
+
+<div class="modal-buttons">
+
+<button
+id="modalAddToCart"
+class="modal-cart-button"
+type="button"
+onclick="addModalProductToCart()">
+🛒 Add to Cart
+</button>
+
+<a
+id="modalWhatsApp"
+class="modal-whatsapp-button"
+href="#"
+target="_blank">
+💬 Ask on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="container">
+
+<h2>
+Contact Smart Electronics
+</h2>
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="icon">
+📞
+</div>
+
+<strong>
+Phone
+</strong>
+
+<a href="tel:+254716127023">
++254 716 127 023
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+💬
+</div>
+
+<strong>
+WhatsApp
+</strong>
+
+<a
+href="https://wa.me/254716127023"
+target="_blank">
++254 716 127 023
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+📧
+</div>
+
+<strong>
+Email
+</strong>
+
+<a href="mailto:info@smartelectronics.com">
+info@smartelectronics.com
+</a>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+📍
+</div>
+
+<strong>
+Location
+</strong>
+
+<span>
+Kenya
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<section
+class="section cart-section"
+id="cart">
+
+<div class="container cart-box">
+
+<div class="section-head">
+
+<h2>
+🛒 Your Shopping Cart
+</h2>
+
+<p>
+Review your selected products.
+</p>
+
+</div>
+
+<div id="cartItems">
+</div>
+
+<div
+class="cart-total"
+id="cartTotal">
+Total: KSh 0
+</div>
+
+<button
+class="clear-button"
+type="button"
+onclick="clearCart()">
+Clear Cart
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CHECKOUT
+========================= -->
+
+<section
+class="section checkout-section"
+id="checkout">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+🛍️ Checkout
+</h2>
+
+<p>
+Enter your details to place your order.
+</p>
+
+</div>
+
+
+<form
+id="checkoutForm"
+class="checkout-form">
+
+<input
+class="input"
+type="text"
+id="customerName"
+placeholder="Your full name"
+required>
+
+
+<input
+class="input"
+type="tel"
+id="customerPhone"
+placeholder="Phone number"
+required>
+
+
+<input
+class="input"
+type="text"
+id="customerLocation"
+placeholder="Delivery location"
+required>
+
+
+<button
+class="checkout-b
