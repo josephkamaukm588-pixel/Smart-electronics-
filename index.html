@@ -7,11 +7,6 @@
 <title>Smart Electronics Kenya</title>
 
 <style>
-
-/* =========================
-   GENERAL
-========================= */
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -23,52 +18,49 @@ html{
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f4f7fb;
-    color:#1f2937;
-    line-height:1.6;
+    color:#172033;
 }
 
-a{
-    color:inherit;
+button,
+input{
+    font-family:inherit;
 }
-
-
-/* =========================
-   HEADER
-========================= */
 
 header{
-    background:#0b1f33;
+    background:#071a2b;
     color:white;
-    padding:18px 20px;
     position:sticky;
     top:0;
     z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
-.header-wrap{
+.header{
     max-width:1200px;
     margin:auto;
+    padding:16px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:15px;
+    gap:20px;
 }
 
 .logo{
-    font-size:24px;
+    font-size:25px;
     font-weight:bold;
-    color:#f59e0b;
+    white-space:nowrap;
 }
 
 .logo span{
-    color:white;
+    color:#22c55e;
 }
 
 nav{
     display:flex;
     gap:20px;
+    align-items:center;
 }
 
 nav a{
@@ -81,34 +73,42 @@ nav a:hover{
     color:#22c55e;
 }
 
-.menu-btn{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
+.cart-nav{
+    background:#16a34a;
+    padding:9px 14px;
+    border-radius:8px;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
 .hero{
-    background:linear-gradient(135deg,#102a43,#1f4e79);
-    color:white;
-    padding:75px 20px;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
+    padding:80px 20px;
+    color:white;
+
+    background:
+    linear-gradient(rgba(3,20,35,.72),rgba(3,20,35,.72)),
+    url("https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:800px;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:48px;
     margin-bottom:15px;
 }
 
 .hero p{
     font-size:19px;
-    max-width:700px;
-    margin:0 auto 30px;
     color:#e5e7eb;
+    margin-bottom:30px;
 }
 
 .hero-buttons{
@@ -120,11 +120,10 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-    padding:15px 25px;
-    border-radius:10px;
+    padding:14px 25px;
+    border-radius:9px;
     text-decoration:none;
     font-weight:bold;
-    font-size:16px;
 }
 
 .shop-btn{
@@ -132,70 +131,50 @@ nav a:hover{
     color:white;
 }
 
-.shop-btn:hover{
-    background:#15803d;
-}
-
 .whatsapp-btn{
     background:#25d366;
     color:white;
 }
 
-.whatsapp-btn:hover{
-    background:#1ebe5d;
-}
-
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
+.features{
+    max-width:1100px;
+    margin:-45px auto 50px;
+    position:relative;
     background:white;
+    border-radius:15px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
+    overflow:hidden;
+}
+
+.feature{
     text-align:center;
+    padding:30px 15px;
+    border-right:1px solid #eee;
 }
 
-.stat{
-    padding:20px;
-    border-right:1px solid #e5e7eb;
-}
-
-.stat:last-child{
+.feature:last-child{
     border-right:none;
 }
 
-.stat-icon{
+.feature-icon{
     font-size:35px;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
-.stat h2{
-    font-size:30px;
-    color:#111827;
+.feature h3{
+    margin-bottom:5px;
 }
 
-.stat p{
+.feature p{
     color:#6b7280;
 }
 
-
-/* =========================
-   PRODUCTS
-========================= */
-
-.products-section{
-    padding:70px 20px;
-    background:#f8fafc;
-}
-
-.container{
+.section{
     max-width:1200px;
     margin:auto;
+    padding:65px 20px;
 }
 
 .section-title{
@@ -204,143 +183,146 @@ nav a:hover{
 }
 
 .section-title h2{
-    font-size:40px;
-    color:#111827;
+    font-size:36px;
     margin-bottom:8px;
 }
 
 .section-title p{
     color:#6b7280;
-    font-size:18px;
+    font-size:17px;
 }
 
+.search-box{
+    max-width:600px;
+    margin:0 auto 25px;
+}
 
-/* =========================
-   CATEGORY BUTTONS
-========================= */
+.search-box input{
+    width:100%;
+    padding:15px 18px;
+    border:2px solid #e5e7eb;
+    border-radius:30px;
+    font-size:16px;
+    outline:none;
+}
+
+.search-box input:focus{
+    border-color:#16a34a;
+}
 
 .categories{
     display:flex;
     justify-content:center;
-    gap:12px;
+    gap:10px;
     flex-wrap:wrap;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
-.category-btn{
+.category{
+    padding:11px 18px;
     border:2px solid #e5e7eb;
     background:white;
-    padding:13px 20px;
     border-radius:30px;
     cursor:pointer;
-    font-size:16px;
     font-weight:bold;
-    color:#1f2937;
-    transition:0.2s;
 }
 
-.category-btn:hover{
-    border-color:#16a34a;
-    transform:translateY(-2px);
-}
-
-.category-btn.active{
+.category:hover,
+.category.active{
     background:#16a34a;
     color:white;
     border-color:#16a34a;
 }
-
-
-/* =========================
-   PRODUCT GRID
-========================= */
 
 .product-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:22px;
+    gap:25px;
 }
 
-
-/* =========================
-   PRODUCT CARD
-========================= */
-
-.product-card{
+.product{
     background:white;
-    border-radius:15px;
+    border-radius:16px;
     overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,0.08);
-    transition:0.25s;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.25s;
 }
 
-.product-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
 }
 
 .product-image{
-    height:200px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#eef2f7;
-    font-size:80px;
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block;
 }
 
 .product-info{
-    padding:20px;
+    padding:18px;
 }
 
-.product-info h3{
+.product-category{
+    color:#16a34a;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.product h3{
+    margin:6px 0;
     font-size:19px;
-    margin-bottom:8px;
-    color:#111827;
 }
 
-.product-info p{
+.product-description{
     color:#6b7280;
     font-size:14px;
-    margin-bottom:12px;
+    min-height:45px;
+}
+
+.rating{
+    margin:10px 0;
+    color:#f59e0b;
 }
 
 .price{
-    font-size:20px;
-    font-weight:bold;
     color:#16a34a;
-    margin-bottom:15px;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:14px;
 }
 
-.add-cart-btn{
-    display:block;
+.add-btn{
     width:100%;
-    text-align:center;
+    border:0;
     background:#16a34a;
     color:white;
-    padding:12px;
-    border:none;
+    padding:13px;
     border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
     cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
 }
 
-.add-cart-btn:hover{
+.add-btn:hover{
     background:#15803d;
 }
 
-
-/* =========================
-   CART
-========================= */
+.no-products{
+    text-align:center;
+    padding:40px;
+    color:#6b7280;
+    display:none;
+}
 
 .cart-section{
-    padding:70px 20px;
     background:white;
 }
 
 .cart-box{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
 }
 
@@ -351,24 +333,30 @@ nav a:hover{
 .cart-item{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:18px;
-    margin-bottom:12px;
+    gap:18px;
     background:#f8fafc;
     border:1px solid #e5e7eb;
     border-radius:12px;
+    padding:15px;
+    margin-bottom:12px;
 }
 
-.cart-item-info{
+.cart-item-image{
+    width:75px;
+    height:75px;
+    object-fit:cover;
+    border-radius:9px;
+}
+
+.cart-details{
     flex:1;
 }
 
-.cart-item-info h3{
-    font-size:17px;
+.cart-details h3{
+    margin-bottom:4px;
 }
 
-.cart-item-info p{
+.cart-details p{
     color:#16a34a;
     font-weight:bold;
 }
@@ -380,14 +368,14 @@ nav a:hover{
 }
 
 .quantity-btn{
-    width:38px;
-    height:38px;
-    border:none;
-    border-radius:8px;
-    background:#0b1f33;
+    width:34px;
+    height:34px;
+    border:0;
+    border-radius:6px;
+    background:#071a2b;
     color:white;
-    font-size:20px;
     cursor:pointer;
+    font-size:18px;
 }
 
 .quantity{
@@ -397,116 +385,997 @@ nav a:hover{
 }
 
 .remove-btn{
-    border:none;
+    border:0;
     background:#ef4444;
     color:white;
-    padding:9px 12px;
+    padding:9px 11px;
     border-radius:7px;
     cursor:pointer;
 }
 
 .cart-total{
-    margin-top:25px;
-    padding:20px;
-    background:#0b1f33;
+    background:#071a2b;
     color:white;
+    padding:22px;
     border-radius:12px;
+    margin-top:25px;
     text-align:right;
 }
 
-.cart-total h2{
-    font-size:24px;
-}
-
-.clear-cart{
-    margin-top:15px;
+.clear-btn{
+    margin-top:12px;
+    border:0;
     background:#ef4444;
     color:white;
-    border:none;
-    padding:11px 18px;
-    border-radius:8px;
+    padding:10px 16px;
+    border-radius:7px;
     cursor:pointer;
 }
 
-.empty-cart{
+.empty{
     text-align:center;
-    padding:35px;
+    padding:40px;
     color:#6b7280;
 }
 
-
-/* =========================
-   CHECKOUT
-========================= */
-
-.checkout-section{
-    padding:70px 20px;
-    background:#f8fafc;
+.checkout{
+    background:#f4f7fb;
 }
 
-.checkout-box{
-    max-width:700px;
+.checkout-form{
+    max-width:650px;
     margin:auto;
-}
-
-.checkout-section h2{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-#checkoutForm{
     background:white;
-    padding:25px;
+    padding:28px;
     border-radius:15px;
-    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-#checkoutForm input{
-    display:block;
+.checkout-form input{
     width:100%;
     padding:14px;
-    margin-bottom:15px;
     border:1px solid #d1d5db;
     border-radius:8px;
+    margin-bottom:15px;
     font-size:16px;
+    outline:none;
 }
 
-#checkoutForm input:focus{
-    outline:none;
+.checkout-form input:focus{
     border-color:#16a34a;
 }
 
-.checkout-button{
+.order-btn{
     width:100%;
-    padding:14px;
-    border:none;
-    border-radius:8px;
-    background:#16a34a;
+    padding:15px;
+    border:0;
+    background:#25d366;
     color:white;
-    font-size:17px;
+    border-radius:8px;
     font-weight:bold;
+    font-size:17px;
     cursor:pointer;
 }
 
-.checkout-button:hover{
-    background:#15803d;
-}
-
-#orderMessage{
+.order-message{
     margin-top:20px;
-    padding:15px;
-    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.contact{
+    background:#101828;
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.contact h2{
+    font-size:34px;
+    margin-bottom:22px;
+}
+
+.contact p{
+    margin:11px 0;
+    font-size:18px;
+}
+
+.contact a{
+    color:#60a5fa;
+    font-weight:bold;
+}
+
+.whatsapp-contact{
+    color:#25d366 !important;
+}
+
+footer{
+    background:#050d17;
+    color:#cbd5e1;
+    text-align:center;
+    padding:25px 15px;
+}
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .header{
+        flex-direction:column;
+    }
+
+    nav{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+        margin:20px;
+    }
+
+    .feature{
+        border-right:none;
+        border-bottom:1px solid #eee;
+    }
+
+    .feature:last-child{
+        border-bottom:none;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cart-item{
+        flex-wrap:wrap;
+    }
+
+    .quantity-controls{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header">
+
+<div class="logo">
+Smart<span>Electronics</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#cart" class="cart-nav">
+🛒 Cart (<span id="navCartCount">0</span>)
+</a>
+<a href="#checkout">Checkout</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Smart Electronics Kenya</h1>
+
+<p>
+Quality smartphones, laptops, headphones, smart watches
+and modern electronics at affordable prices.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn shop-btn">
+🛍️ Shop Now
+</a>
+
+<a
+href="https://wa.me/254716127023"
+target="_blank"
+class="btn whatsapp-btn"
+>
+💬 WhatsApp Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🚚</div>
+
+<h3>Fast Delivery</h3>
+
+<p>Delivery across Kenya</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">💳</div>
+
+<h3>Easy Ordering</h3>
+
+<p>Order directly through WhatsApp</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🛡️</div>
+
+<h3>Quality Products</h3>
+
+<p>Modern electronics</p>
+
+</div>
+
+</section>
+
+
+<section class="section" id="products">
+
+<div class="section-title">
+
+<h2>Featured Products</h2>
+
+<p>
+Find the technology you need
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔎 Search products..."
+onkeyup="searchProducts()"
+>
+
+</div>
+
+
+<div class="categories">
+
+<button
+class="category active"
+onclick="filterProducts('all',this)"
+>
+All
+</button>
+
+<button
+class="category"
+onclick="filterProducts('smartphones',this)"
+>
+📱 Smartphones
+</button>
+
+<button
+class="category"
+onclick="filterProducts('laptops',this)"
+>
+💻 Laptops
+</button>
+
+<button
+class="category"
+onclick="filterProducts('headphones',this)"
+>
+🎧 Headphones
+</button>
+
+<button
+class="category"
+onclick="filterProducts('watches',this)"
+>
+⌚ Smart Watches
+</button>
+
+</div>
+
+
+<div class="product-grid" id="productGrid">
+
+
+<div
+class="product"
+data-category="smartphones"
+data-name="Samsung Galaxy Smartphone"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+alt="Smartphone"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Smartphone
+</div>
+
+<h3>Samsung Galaxy Smartphone</h3>
+
+<p class="product-description">
+Modern smartphone with a beautiful display and powerful performance.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 15,000
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Samsung Galaxy Smartphone',15000,'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="smartphones"
+data-name="Premium Smartphone"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80"
+alt="Premium Smartphone"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Smartphone
+</div>
+
+<h3>Premium Smartphone</h3>
+
+<p class="product-description">
+Stylish smartphone designed for entertainment and everyday use.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 22,000
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Premium Smartphone',22000,'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="laptops"
+data-name="Modern Laptop"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
+alt="Laptop"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Laptop
+</div>
+
+<h3>Modern Laptop</h3>
+
+<p class="product-description">
+Reliable laptop for business, school and home.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 35,000
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Modern Laptop',35000,'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="laptops"
+data-name="Professional Laptop"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80"
+alt="Professional Laptop"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Laptop
+</div>
+
+<h3>Professional Laptop</h3>
+
+<p class="product-description">
+Powerful laptop for work, study and productivity.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 48,000
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Professional Laptop',48000,'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="headphones"
+data-name="Wireless Headphones"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+alt="Wireless Headphones"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Headphones
+</div>
+
+<h3>Wireless Headphones</h3>
+
+<p class="product-description">
+Enjoy clear sound and comfortable wireless listening.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 2,500
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Wireless Headphones',2500,'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="headphones"
+data-name="Premium Headphones"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80"
+alt="Premium Headphones"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Headphones
+</div>
+
+<h3>Premium Headphones</h3>
+
+<p class="product-description">
+Premium sound quality with a comfortable modern design.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 5,500
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Premium Headphones',5500,'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="watches"
+data-name="Smart Watch"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+alt="Smart Watch"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Smart Watch
+</div>
+
+<h3>Smart Watch</h3>
+
+<p class="product-description">
+Track your activities and stay connected throughout the day.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 4,500
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Smart Watch',4500,'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+<div
+class="product"
+data-category="watches"
+data-name="Premium Smart Watch"
+>
+
+<img
+class="product-image"
+src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80"
+alt="Premium Smart Watch"
+>
+
+<div class="product-info">
+
+<div class="product-category">
+Smart Watch
+</div>
+
+<h3>Premium Smart Watch</h3>
+
+<p class="product-description">
+A stylish smart watch for fitness, notifications and daily life.
+</p>
+
+<div class="rating">
+★★★★★
+</div>
+
+<div class="price">
+KSh 8,500
+</div>
+
+<button
+class="add-btn"
+onclick="addToCart('Premium Smart Watch',8500,'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80')"
+>
+🛒 Add to Cart
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+<div class="no-products" id="noProducts">
+No products found.
+</div>
+
+</section>
+
+
+<section class="section cart-section" id="cart">
+
+<div class="cart-box">
+
+<div class="section-title">
+
+<h2>🛒 Your Shopping Cart</h2>
+
+<p id="cartStatus">
+Your cart is empty.
+</p>
+
+</div>
+
+<div
+class="cart-items"
+id="cartItems"
+>
+</div>
+
+<div class="cart-total">
+
+<h2>
+Total: KSh
+<span id="cartTotal">0</span>
+</h2>
+
+<button
+class="clear-btn"
+onclick="clearCart()"
+>
+Clear Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section checkout" id="checkout">
+
+<div class="section-title">
+
+<h2>🛍️ Checkout</h2>
+
+<p>
+Enter your details and send your order directly to WhatsApp.
+</p>
+
+</div>
+
+<form
+class="checkout-form"
+id="checkoutForm"
+>
+
+<input
+type="text"
+id="customerName"
+placeholder="Your full name"
+required
+>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Phone number"
+required
+>
+
+<input
+type="text"
+id="customerLocation"
+placeholder="Delivery location"
+required
+>
+
+<button
+class="order-btn"
+type="submit"
+>
+💬 Place Order on WhatsApp
+</button>
+
+<div
+class="order-message"
+id="orderMessage"
+>
+</div>
+
+</form>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2>Contact Smart Electronics</h2>
+
+<p>
+📞 Phone:
+<a href="tel:0716127023">
+0716127023
+</a>
+</p>
+
+<p>
+💬 WhatsApp:
+<a
+class="whatsapp-contact"
+href="https://wa.me/254716127023"
+target="_blank"
+>
+0716127023
+</a>
+</p>
+
+<p>
+📧 Email:
+info@smartelectronics.com
+</p>
+
+<p>
+📍 Kenya
+</p>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Smart Electronics Kenya. All rights reserved.
+</p>
+
+<p>
+Quality Electronics • Fast Delivery • Easy Ordering
+</p>
+
+</footer>
+
+
+<script>
+
+let cart =
+JSON.parse(localStorage.getItem("smartCart")) || [];
+
+
+function saveCart(){
+
+localStorage.setItem(
+"smartCart",
+JSON.stringify(cart)
+);
+
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+function addToCart(name,price,image){
 
-.about{
-    padding:70px 20px;
-    background:white;
+let existing =
+cart.find(item => item.name === name);
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+name:name,
+price:price,
+image:image,
+quantity:1
+});
+
 }
 
-.about-box{
-    max-width:900
+saveCart();
+
+displayCart();
+
+alert(name + " added to your cart!");
+
+}
+
+
+function increaseQuantity(index){
+
+cart[index].quantity++;
+
+saveCart();
+
+displayCart();
+
+}
+
+
+function decreaseQuantity(index){
+
+if(cart[index].quantity > 1){
+
+cart[index].quantity--;
+
+}else{
+
+cart.splice(index,1);
+
+}
+
+saveCart();
+
+displayCart();
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+saveCart();
+
+displayCart();
+
+}
+
+
+function clearCart(){
+
+if(cart.length === 0){
+
+return;
+
+}
+
+cart=[];
+
+saveCart();
+
+displayCart();
+
+}
+
+
+function displayCart(){
+
+const cartItems =
+document.getElementById("cartItems");
+
+const cartTotal =
+document.getElementById("cartTotal");
+
+const cartStatus =
+document.getElementById("cartStatus");
+
+const navCartCount =
+document.getElementById("navCartCount");
+
+
+cartItems.innerHTML="";
+
+let total=0;
+
+let itemCount=0;
+
+
+if(cart.length===0){
+
+cartItems.innerHTML=`
+<div class="empty">
+🛒 Your cart is empty.<br>
+Add products from the store above.
+</div>
+`;
+
+}
+
+
+cart.forEach((item,index)=>{
+
+let itemTotal =
+item.price * item.quantity;
+
+total += itemTotal;
+
+itemCount += item.quantity;
+
+
+cartItems.innerHTML += `
+
+<div class="cart-item">
+
+<img
+class="cart-item-image"
+src="${item.image}"
+alt="${item.name}"
+>
+
+<div class="cart-details">
+
+<h3>${item.name
